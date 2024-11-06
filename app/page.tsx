@@ -1,14 +1,24 @@
 import Image from "next/image";
 import { socialLinks } from "./config";
+import {
+  AppleExperience,
+  NucleusExperience,
+  SvadhiExperience,
+  CiamtisExperience,
+  TaExperience,
+  EyExperience,
+  OlympusExperience,
+} from "./WorkExperience";
+import { Card, CardContent, CardDescription } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <section>
-      <a href={socialLinks.twitter} target="_blank">
+    <section className="max-w-5xl mx-auto p-6 bg-gruvbox-background text-gruvbox-foreground">
+      <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer">
         <Image
-          src="/profile.png"
+          src="/profile.jpg"
           alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+          className="rounded-full bg-gruvbox-card block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5"
           unoptimized
           width={160}
           height={160}
@@ -16,52 +26,46 @@ export default function Page() {
         />
       </a>
 
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Portfolio, made simple!
+      <h1 className="mb-8 text-4xl font-extrabold tracking-tight text-center text-gruvbox-primary">
+        Hey! I'm Charles
       </h1>
 
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS for optimal performance.
+      <div className="prose prose-lg prose-neutral dark:prose-invert mx-auto text-center leading-relaxed">
+        <p className="text-xl text-gruvbox-foreground">
+          I'm a full stack software developer with demonstrated expertise in both front-end and back-end development. Passionate about building efficient and scalable applications.
         </p>
-        <p>
-          Nextfolio includes all the essentials for a stunning portfolio: SEO,
-          MDX support, RSS, Atom, & JSON feeds, analytics, tweet & YouTube
-          embeds, KaTeX integration, and{" "}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
-        </p>
-        <p>
-          Nextfolio is{" "}
-          <a href={socialLinks.github} target="_blank">
-            open-source
-          </a>{" "}
-          and fully customizable, making it easy to add more features.
-        </p>
-        <p>
-          <a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-          >
-            Deploy
-          </a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
-        </p>
+      </div>
+
+      <h2 className="mt-4 mb-6 text-2xl font-semibold text-center text-gruvbox-secondary">Work Experience</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[AppleExperience, NucleusExperience, SvadhiExperience, CiamtisExperience, TaExperience, EyExperience, OlympusExperience].map((experience, index) => (
+          <div className="mb-6" key={index}>
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gruvbox-card w-full h-full flex flex-col">
+              <CardContent className="flex-grow">
+                <div className="flex items-center mb-4">
+                  <Image
+                    src={experience.imagePath}
+                    alt={`${experience.title} logo`}
+                    className="w-16 h-16 mr-4 rounded-xl"
+                    width={64}
+                    height={64}
+                  />
+                  <div>
+                    <h3 className="font-bold text-lg text-gruvbox-primary">{experience.title}</h3>
+                    <h4 className="text-md font-medium text-gruvbox-muted">{experience.jobTitle}</h4>
+                  </div>
+                </div>
+                <CardDescription>
+                  <ul className="list-disc list-inside space-y-2">
+                    {experience.descriptions.map((desc, descIndex) => (
+                      <li key={descIndex}>{desc}</li>
+                    ))}
+                  </ul>
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
       </div>
     </section>
   );

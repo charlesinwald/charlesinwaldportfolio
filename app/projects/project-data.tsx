@@ -1,30 +1,93 @@
 export interface Project {
   title: string;
-  year: number;
   description: string;
   url: string;
+  image: string;
 }
 
 export const projects: Project[] = [
   {
-    title: "Project One",
-    year: 2023,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam veritatis dolorem rem praesentium dicta labore, at laudantium quisquam.",
-    url: "https://example.com/",
+    title: "RustinX",
+    description: "Simplify managing your Nginx Server",
+    url: "https://rustinx.com",
+    image: "/rustinx.png",
   },
   {
-    title: "Project Two",
-    year: 2022,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam veritatis dolorem rem praesentium dicta labore, at laudantium quisquam.",
-    url: "https://example.com/",
+    title: "Inkwell App",
+    description: "Unlock the Power of Intelligent Learning",
+    url: "https://www.getinkwellapp.com/",
+    image: "/inkwellportfoliologo.png",
   },
   {
-    title: "Project Three",
-    year: 2021,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam veritatis dolorem rem praesentium dicta labore, at laudantium quisquam.",
-    url: "https://example.com/",
+    title: "Data Science Landing",
+    description: "Collection of Data Science Projects",
+    url: "https://data-science-landing.vercel.app/",
+    image: "/datascienceprojects.png",
+  },
+  {
+    title: "Aura Tracker",
+    description: "Sequential Test Scheduling and Compliance Management with over 700k users",
+    url: "https://auratracker.org",
+    image: "/aura.png",
+  },
+  {
+    title: "CSV to RDF",
+    description: "Transforms flat file CSV data into RDF graph database",
+    url: "https://github.com/charlesinwald/csvtordf",
+    image: "/csv2rdf.gif",
+  },
+  {
+    title: "Amazon Fake Review Spotter",
+    description: "Identify Fake Reviews on Amazon with 90% accuracy",
+    url: "https://github.com/charlesinwald/AmazonFakeReviewSpotter/tree/master",
+    image: "/fakereviewspotter.gif",
+  },
+  {
+    title: "Fractals",
+    description: "Draw your own fractals",
+    url: "https://elastic-leakey-895379.netlify.app/",
+    image: "/fractals.png",
+  },
+  {
+    title: "Sneaker Customization",
+    description: "Customize sneakers in 3D",
+    url: "https://sneaker-customization.vercel.app/",
+    image: "/sneakercustomizer.png",
+  },
+  {
+    title: "Rusty Read",
+    description: "Command Line File Browser",
+    url: "https://github.com/charlesinwald/rusty_read",
+    image: "/rustyread.png",
+  },
+  {
+    title: "DevWorthy",
+    description: "Social Network Driven by Developers",
+    url: "https://github.com/charlesinwald/DevWorthy",
+    image: "/devworthy.gif",
+  },
+  {
+    title: "SegAN",
+    description: "COVID-19 Lung Segmentation Challenge 2020",
+    url: "https://github.com/charlesinwald/SegAN",
+    image: "/covid.png",
+  },
+  {
+    title: "ClockChain",
+    description: "UTC Based Cryptocurrency Proof of Concept",
+    url: "https://github.com/charlesinwald/clockchain",
+    image: "/ClockChain2.png",
+  },
+  {
+    title: "LeanHash",
+    description: "Lightweight Distributed Hash Table",
+    url: "https://github.com/charlesinwald/leanhash",
+    image: "/leanhash.png",
+  },
+  {
+    title: "Crowdsensing for Pavement Monitoring",
+    description: "Lehigh University Research for Pennsylvania DOT",
+    url: "https://github.com/charlesinwald/DOT-Application",
+    image: "/crowdsensing.png",
   },
 ];
