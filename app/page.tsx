@@ -90,7 +90,7 @@ export default function Page() {
 
   return (
     <section className="max-w-5xl mx-auto p-6 bg-gruvbox-background text-gruvbox-foreground relative rounded-3xl">
-      <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer">
+      <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
         <Image
           src="/profile.jpg"
           alt="Profile photo"
