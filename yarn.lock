@@ -3099,6 +3099,7 @@ __metadata:
     tailwind-merge: ^2.5.4
     tailwindcss: 3.4.10
     tailwindcss-animate: ^1.0.7
+    three: ^0.170.0
     typescript: 5.5.4
   languageName: unknown
   linkType: soft
@@ -3459,6 +3460,13 @@ __metadata:
   dependencies:
     any-promise: ^1.0.0
   checksum: 84e1b804bfec49f3531215f17b4a6e50fd4397b5f7c1bccc427b9c656e1ecfb13ea79d899930184f78bc2f57285c54d9a50a590c8868f4f0cef5c1d9f898b05e
+  languageName: node
+  linkType: hard
+
+"three@npm:^0.170.0":
+  version: 0.170.0
+  resolution: "three@npm:0.170.0"
+  checksum: 774d8091e51f784cf4f5a5326e11e2be947ab7cc5f1056de59f13d4682310937615b264d7161357b09bd16e6648719c49e568d5cc595f14637477ecadeec71e2
   languageName: node
   linkType: hard
 
