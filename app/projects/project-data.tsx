@@ -19,17 +19,17 @@ export const projects: Project[] = [
     image: "/inkwellportfoliologo.png",
   },
   {
-    title: "Data Science Landing",
+    title: "Data Science Projects",
     description: "Collection of Data Science Projects",
     url: "https://data-science-landing.vercel.app/",
     image: "/datascienceprojects.png",
   },
-  {
-    title: "Aura Tracker",
-    description: "Sequential Test Scheduling and Compliance Management with over 700k users",
-    url: "https://auratracker.org",
-    image: "/aura.png",
-  },
+  // {
+  //   title: "Aura Tracker",
+  //   description: "Sequential Test Scheduling and Compliance Management with over 700k users",
+  //   url: "https://auratracker.org",
+  //   image: "/aura.png",
+  // },
   {
     title: "CSV to RDF",
     description: "Transforms flat file CSV data into RDF graph database",
@@ -83,11 +83,5 @@ export const projects: Project[] = [
     description: "Lightweight Distributed Hash Table",
     url: "https://github.com/charlesinwald/leanhash",
     image: "/leanhash.png",
-  },
-  {
-    title: "Crowdsensing for Pavement Monitoring",
-    description: "Lehigh University Research for Pennsylvania DOT",
-    url: "https://github.com/charlesinwald/DOT-Application",
-    image: "/crowdsensing.png",
   },
 ];

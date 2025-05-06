@@ -9,7 +9,7 @@ export const AppleExperience = {
 };
 
 export const NucleusExperience = {
-  title: "Nucleus",
+  title: "Nucleus Healthcare",
   jobTitle: "Frontend Developer",
   imagePath: "/nucleus.png", // Update with the actual image path
   descriptions: [

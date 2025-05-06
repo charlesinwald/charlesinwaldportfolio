@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { projects } from "./project-data";
 import { Card, CardContent } from "@/components/ui/card";
+import { HoverPeek } from "app/components/link-preview";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -18,11 +19,12 @@ export default function Projects() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium"
+            <HoverPeek url={project.url}>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium"
             >
               <Card
                 key={index}
@@ -45,8 +47,9 @@ export default function Projects() {
                     {project.description}
                   </p>
                 </CardContent>
-              </Card>
-            </a>
+                </Card>
+              </a>
+            </HoverPeek>
           ))}
         </div>
       </div>
