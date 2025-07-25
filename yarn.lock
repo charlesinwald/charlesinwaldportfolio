@@ -498,6 +498,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-slot@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@radix-ui/react-slot@npm:1.2.3"
+  dependencies:
+    "@radix-ui/react-compose-refs": 1.1.2
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 2731089e15477dd5eef98a5757c36113dd932d0c52ff05123cd89f05f0412e95e5b205229185d1cd705cda4a674a838479cce2b3b46ed903f82f5d23d9e3f3c2
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-use-callback-ref@npm:1.1.1":
   version: 1.1.1
   resolution: "@radix-ui/react-use-callback-ref@npm:1.1.1"
@@ -3467,6 +3482,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@radix-ui/react-hover-card": ^1.1.13
+    "@radix-ui/react-slot": ^1.2.3
     "@tailwindcss/typography": ^0.5.14
     "@types/node": 22.5.0
     "@types/react": 18.3.4

@@ -13,7 +13,9 @@ import {
 } from "./WorkExperience";
 import { MastersDegree, BachelorsDegree } from "./Education";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import ThreeBackground from "./components/ThreeBackground";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -96,6 +98,16 @@ export default function Page() {
             </div>
           ))}
         </div>
+        <div className="flex justify-center mt-8 mb-8">
+          <Link href="/projects">
+            <Button
+              size="lg"
+              className="cursor-pointer bg-gruvbox-primary hover:bg-gruvbox-primary/90 text-gruvbox-background font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              See Projects
+            </Button>
+          </Link>
+        </div>
         <h2 className="mt-4 mb-6 text-2xl font-semibold text-center text-gruvbox-secondary">
           Education
         </h2>
@@ -144,7 +156,13 @@ export default function Page() {
         <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gruvbox-card w-full h-full flex flex-col">
           <CardContent className="flex-grow">
             <div className="flex items-center mb-4">
-              <Image src="/codeandcoffee.webp" alt="Code and Coffee" className="w-16 h-16 mr-4 rounded-xl" width={64} height={64} />
+              <Image
+                src="/codeandcoffee.webp"
+                alt="Code and Coffee"
+                className="w-16 h-16 mr-4 rounded-xl"
+                width={64}
+                height={64}
+              />
               <div>
                 <h3 className="font-bold text-2xl text-gruvbox-primary">
                   Code and Coffee
@@ -157,10 +175,12 @@ export default function Page() {
             <CardDescription>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-lg">
-                  Code and Coffee is a community of developers who meet up to code and drink coffee. Over 9000 members
+                  Code and Coffee is a community of developers who meet up to
+                  code and drink coffee. Over 9000 members
                 </li>
                 <li className="text-lg">
-                  Founded Speaking/Workshop Program, Organized hackathon, Given 20+ talks
+                  Founded Speaking/Workshop Program, Organized hackathon, Given
+                  20+ talks
                 </li>
               </ul>
             </CardDescription>
