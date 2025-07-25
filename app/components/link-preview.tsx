@@ -165,7 +165,7 @@ export const HoverPeek = ({
     animate: {
       opacity: 1,
       rotateY: 0,
-      transition: { type: "spring", stiffness: 200, damping: 18 },
+      transition: { type: "spring" as const, stiffness: 200, damping: 18 },
     },
     exit: { opacity: 0, rotateY: 90, transition: { duration: 0.15 } },
   };
