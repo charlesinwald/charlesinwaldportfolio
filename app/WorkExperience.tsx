@@ -1,3 +1,13 @@
+export const TrudeExperience = {
+  title: "Trude",
+  jobTitle: "Full Stack Developer",
+  imagePath: "/trudelogo.png", // Update with the actual image path
+  descriptions: [
+    "Led end-to-end software development at a startup, owning frontend, backend, DevOps, AI, and infrastructure to deliver full-stack solutions independently." ,
+    "Built and maintained full-stack applications using Python FastAPI, PostgreSQL, and React, deploying and scaling services on AWS.",
+  ]
+}
+
 export const AppleExperience = {
   title: "Apple",
   jobTitle: "Frontend Developer",

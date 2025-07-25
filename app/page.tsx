@@ -9,6 +9,7 @@ import {
   TaExperience,
   EyExperience,
   OlympusExperience,
+  TrudeExperience,
 } from "./WorkExperience";
 import { MastersDegree, BachelorsDegree } from "./Education";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
@@ -52,6 +53,7 @@ export default function Page() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
+            TrudeExperience,
             AppleExperience,
             NucleusExperience,
             SvadhiExperience,
