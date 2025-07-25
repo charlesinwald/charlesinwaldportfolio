@@ -13,12 +13,6 @@ export const projects: Project[] = [
     image: "/rustinx.png",
   },
   {
-    title: "Inkwell App",
-    description: "Unlock the Power of Intelligent Learning",
-    url: "https://www.getinkwellapp.com/",
-    image: "/inkwellportfoliologo.png",
-  },
-  {
     title: "Data Science Projects",
     description: "Collection of Data Science Projects",
     url: "https://data-science-landing.vercel.app/",

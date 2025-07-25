@@ -8,6 +8,16 @@ export const TrudeExperience = {
   ]
 }
 
+export const InkwellExperience = {
+  title: "Inkwell",
+  jobTitle: "Full Stack Developer",
+  imagePath: "/inkwellportfoliologo.png", // Update with the actual image path
+  descriptions: [
+    "Developed an e-learning mobile app, using ChatGPT, to generate lessons and interactive quizzes tailored to a user’s interests and learning pace.",
+    "Actively contribute to all stages of the development lifecycle, from initial architecture design to deployment, focusing on scalability, security, and user experience.",
+  ],
+};
+
 export const AppleExperience = {
   title: "Apple",
   jobTitle: "Frontend Developer",
