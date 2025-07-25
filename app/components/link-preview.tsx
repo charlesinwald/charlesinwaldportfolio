@@ -9,6 +9,7 @@ import {
   motion,
   useMotionValue,
   useSpring,
+  Variants,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -160,7 +161,7 @@ export const HoverPeek = ({
   };
 
   // Defines how the main preview card animates in and out (a little 3D flip).
-  const cardMotionVariants = {
+  const cardMotionVariants: Variants = {
     initial: { opacity: 0, rotateY: -90, transition: { duration: 0.15 } },
     animate: {
       opacity: 1,
@@ -171,7 +172,7 @@ export const HoverPeek = ({
   };
 
   // Defines how the lens overlay animates.
-  const lensMotionVariants = {
+  const lensMotionVariants: Variants = {
     initial: { opacity: 0, scale: 0.7 },
     animate: {
       opacity: 1,
