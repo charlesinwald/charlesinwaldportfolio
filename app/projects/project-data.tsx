@@ -37,6 +37,18 @@ export const projects: Project[] = [
     image: "/csv2rdf.gif",
   },
   {
+    title: "AI Fact Checker",
+    description: "Your AI-Powered Truth Seeker",
+    url: "https://aifactchecker.vercel.app",
+    image: "/aifactchecker.png",
+  },
+  {
+    title: "AI Contract Analyzer",
+    description: "Analyze contracts with AI",
+    url: "https://ai-contract-analyzer-551069426734.us-west1.run.app/",
+    image: "/aicontractanalyzer.png",
+  },
+  {
     title: "Amazon Fake Review Spotter",
     description: "Identify Fake Reviews on Amazon with 90% accuracy",
     url: "https://github.com/charlesinwald/AmazonFakeReviewSpotter/tree/master",
