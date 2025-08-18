@@ -25,6 +25,12 @@ export const projects: Project[] = [
   //   image: "/aura.png",
   // },
   {
+    title: "AI SEO Consultant",
+    description: "Analyzes your website and provides SEO tips",
+    url: "https://seoconsultant.vercel.app/",
+    image: "/AISEOCONSULTANT.jpg",
+  },
+  {
     title: "CSV to RDF",
     description: "Transforms flat file CSV data into RDF graph database",
     url: "https://github.com/charlesinwald/csvtordf",
