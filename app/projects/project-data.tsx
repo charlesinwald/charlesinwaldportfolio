@@ -43,6 +43,12 @@ export const projects: Project[] = [
     image: "/csv2rdf.gif",
   },
   {
+    title: "BlinkCoach",
+    description: "AI Conversation Coach",
+    url: "https://blinkcoach.vercel.app",
+    image: "/blinkcoach.png",
+  },
+  {
     title: "AI Fact Checker",
     description: "Your AI-Powered Truth Seeker",
     url: "https://aifactchecker.vercel.app",
