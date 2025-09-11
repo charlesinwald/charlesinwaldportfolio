@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     title: "AI Contract Analyzer",
     description: "Analyze contracts with AI",
-    url: "https://ai-contract-analyzer-551069426734.us-west1.run.app/",
+    url: "https://aicontractanalyzer.vercel.app/",
     image: "/aicontractanalyzer.png",
   },
   {
