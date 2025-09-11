@@ -37,6 +37,12 @@ export const projects: Project[] = [
     image: "/AISEOCONSULTANT.jpg",
   },
   {
+    title: "Mintbill: Invoice Generator",
+    description: "Generate invoices with ease",
+    url: "https://mintbill.vercel.app/",
+    image: "/mintbill.webp",
+  },
+  {
     title: "CSV to RDF",
     description: "Transforms flat file CSV data into RDF graph database",
     url: "https://github.com/charlesinwald/csvtordf",
@@ -70,7 +76,7 @@ export const projects: Project[] = [
     title: "Fractals",
     description: "Draw your own fractals",
     url: "https://elastic-leakey-895379.netlify.app/",
-    image: "/fractals.png",
+    image: "/fractals.gif",
   },
   {
     title: "Sneaker Customization",
