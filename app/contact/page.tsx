@@ -155,11 +155,20 @@ export default function ContactPage() {
             <h3 className="text-2xl font-bold mb-3 text-gruvbox-primary">
               Ready to start your next project?
             </h3>
-            <p className="text-gruvbox-muted mb-6 max-w-2xl mx-auto">
-              I specialize in full-stack development, with expertise in React,
+            <p className="text-gruvbox-muted mb-3 max-w-2xl mx-auto">
+              At Chernow Unlimited, we specialize in full-stack development, with expertise in React,
               Python, and modern web technologies. Let's build something amazing
               together!
             </p>
+            <a
+              href="https://wwww.chernowunlimited.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-gruvbox-primary text-gruvbox-background hover:bg-gruvbox-primary/90 m-3">
+                Chernow Unlimited
+              </Button>
+            </a>
             <div className="flex items-center justify-center gap-2 text-gruvbox-muted text-sm">
               <MapPin className="size-4" />
               <span>New York, NY • Available remotely</span>
