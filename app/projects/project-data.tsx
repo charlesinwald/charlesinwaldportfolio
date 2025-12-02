@@ -75,7 +75,7 @@ export const projects: Project[] = [
   {
     title: "Fractals",
     description: "Draw your own fractals",
-    url: "https://elastic-leakey-895379.netlify.app/",
+    url: "https://fractalgenerator.vercel.app/",
     image: "/fractals.gif",
   },
   {
