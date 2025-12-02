@@ -1,0 +1,147 @@
+---
+title: "Hardening Your Nginx Server: A No-BS Security Guide"
+description: "Learn how to actually secure your Nginx server without the boring technical jargon. Practical steps to keep the bad guys out."
+author: "Charles Inwald"
+date: "2025-10-02"
+tags: ["nginx", "security", "server-hardening", "devops", "cybersecurity"]
+canonical: "https://www.chernowunlimited.com/blog/securing-nginx"
+image: "/blog/nginxwoman.webp"
+---
+
+
+Alright, let's kick the formality to the curb and talk about locking down your Nginx server like you actually care about getting hacked (because, yeah, you should). Nginx is already pretty solid out of the box, but if you just install and forget? Oof, not a good plan. So, here's how you make it way less appealing for bad guys poking around.
+
+## Step One: Don't Run Ancient Software
+
+Seriously, the number one thing people mess up—just update your stuff. Hackers love old versions. Want to know which Nginx you're rocking? Just run:
+
+```bash
+nginx -v
+```
+
+Now, unless you're living under a rock, run your updates. Like:
+
+```bash
+# Debian/Ubuntu
+sudo apt-get update && sudo apt-get upgrade nginx
+
+# CentOS/RHEL
+sudo yum update nginx
+```
+
+That's, like, the bare minimum.
+
+## Step Two: SSL/TLS or Bust
+
+Plain HTTP? What is this, 1999? Encrypt your dang traffic. These days, Let's Encrypt is free (and honestly, if you're not using it, why?).
+
+- Grab a legit SSL cert. Let's Encrypt is your friend.
+- Ditch all those crusty old protocols: SSLv3, TLS 1.0, TLS 1.1. Only TLS 1.2 and 1.3 allowed at this party.
+- Pick strong ciphers. The weak ones are basically an open window.
+
+Here's a snippet—tweak it for your domain and cert paths:
+
+```nginx
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+
+    server_name your_domain.com;
+
+    ssl_certificate /etc/letsencrypt/live/your_domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your_domain.com/privkey.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384';
+}
+```
+
+## Step Three: HTTP Security Headers (Because Browsers Are Dumb by Default)
+
+Browsers need some hand-holding. If you don't set the right headers, you're just asking for XSS and clickjacking.
+
+Toss these in your server block:
+
+```nginx
+server {
+    # ...other config...
+
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline';";
+}
+```
+
+## Step Four: Clean Up Your Nginx Config
+
+Less is more, trust me.
+
+### Hide Version Info
+
+Don't tell the world what version you're running. Add this inside your `http` block:
+
+```nginx
+http {
+    # ...
+    server_tokens off;
+}
+```
+
+### Ditch Unused Modules
+
+If you built Nginx from source, only include what you need. Why risk more bugs?
+
+### Nail Down Buffer Sizes
+
+You don't want randoms slamming your server with massive headers or bodies. Try this:
+
+```nginx
+http {
+    # ...
+    client_body_buffer_size 1K;
+    client_header_buffer_size 1k;
+    client_max_body_size 1k;
+    large_client_header_buffers 2 1k;
+}
+```
+
+(Adjust those numbers if your app actually needs more, but start small.)
+
+## Step Five: Throttle The Haters (aka DoS Protection)
+
+Nginx can slow down request-flooding jerks. Use the built-in rate limiting:
+
+```nginx
+http {
+    # ...
+    limit_req_zone $binary_remote_addr zone=one:10m rate=10r/s;
+
+    server {
+        # ...
+        location /login.html {
+            limit_req zone=one burst=5 nodelay;
+            # proxy_pass or whatever else
+        }
+    }
+}
+```
+
+- `burst=5` lets a short burst through, but after that, sorry buddy.
+- Tweak those numbers to match your traffic.
+
+## Final Note: File Permissions Matter
+
+Don't forget your filesystem. Lock down who can read/write your Nginx config and certs. If everyone can read your SSL private keys, you've already lost.
+
+That's the basics, but don't stop here. Security is a moving target—keep poking at your setup, watch the logs, and don't get complacent. Or, y'know, just ignore all this and hope for the best (not recommended).
+
+## Need Help With This Stuff?
+
+Look, if you're reading this and thinking "yeah, I should do all that... but when?" — I get it. Server security isn't exactly most people's idea of a good time.
+
+That's literally what we do at Chernow Unlimited. We handle the boring-but-critical stuff like hardening servers, setting up proper SSL, and making sure your infrastructure isn't held together with digital duct tape. If you'd rather focus on your actual business instead of Nginx configs, [hit us up](https://www.chernowunlimited.com).
+
+No pressure though. The guide above will get you 80% of the way there if you want to DIY it.
