@@ -194,7 +194,7 @@ export default function Page() {
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-lg">
                   Code and Coffee is a community of developers who meet up to
-                  code and drink coffee. Over 9000 members
+                  code and drink coffee. Over 50,000 members
                 </li>
                 <li className="text-lg">
                   Founded Speaking/Workshop Program, Organized hackathon, Given
