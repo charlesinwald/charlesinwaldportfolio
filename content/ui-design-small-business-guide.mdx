@@ -2,9 +2,9 @@
 title: "UI Design for Small Businesses: Essential Elements and Patterns That Convert in 2025"
 description: "Discover essential UI design for small businesses with practical patterns, sustainable practices, and beginner-friendly elements that drive conversions in 2025."
 author: "Charles Inwald"
-date: "2025-10-30"
-lastModified: "2025-10-30"
-publishedAt: "2025-10-30"
+date: "2024-10-30"
+lastModified: "2024-10-30"
+publishedAt: "2024-10-30"
 category: "UI Design"
 tags: 
   - "UI Design"
@@ -53,9 +53,9 @@ In today's digital landscape, effective **UI design for small businesses** has b
 
 This comprehensive guide breaks down the essential elements, patterns, and practices that small businesses need to create interfaces that not only look professional but also drive real business results. Whether you're a startup founder, a small business owner, or a designer working with limited resources, you'll discover practical strategies to implement immediately.
 
-<Alert className="my-6">
-  <AlertDescription>
-    💡 <strong>Quick Tip:</strong> This guide focuses on practical, implementable strategies that don't require large budgets or extensive technical knowledge. Each section includes actionable takeaways you can apply today.
+<Alert className="my-8 border-blue-500/20 bg-blue-500/10 dark:bg-blue-500/10">
+  <AlertDescription className="text-neutral-200 dark:text-neutral-200 text-[17px] leading-relaxed">
+    💡 <strong className="text-blue-400 dark:text-blue-400">Quick Tip:</strong> This guide focuses on practical, implementable strategies that don't require large budgets or extensive technical knowledge. Each section includes actionable takeaways you can apply today.
   </AlertDescription>
 </Alert>
 
@@ -67,18 +67,33 @@ The **bento grid UI design** trend has revolutionized how small businesses organ
 
 Small businesses particularly benefit from bento grids because they create clear visual hierarchies without requiring complex design skills. Each "compartment" serves as a dedicated space for different types of content—whether it's product features, testimonials, or service offerings. This modular approach makes it easy to update individual sections without redesigning the entire interface.
 
-<Card className="my-6">
-  <CardHeader>
-    <CardTitle>Bento Grid Benefits</CardTitle>
-    <CardDescription>Key advantages for small business websites</CardDescription>
+<Card className="my-8 border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+  <CardHeader className="pb-4">
+    <CardTitle className="text-xl font-bold text-neutral-100 dark:text-neutral-100">Bento Grid Benefits</CardTitle>
+    <CardDescription className="text-neutral-400 dark:text-neutral-400 mt-2">Key advantages for small business websites</CardDescription>
   </CardHeader>
-  <CardContent>
-    <ul className="space-y-2">
-      <li>✅ <strong>Visual Hierarchy:</strong> Clear content organization</li>
-      <li>✅ <strong>Flexibility:</strong> Easy to update individual sections</li>
-      <li>✅ <strong>Responsive:</strong> Adapts seamlessly to all devices</li>
-      <li>✅ <strong>Professional:</strong> Modern, clean appearance</li>
-      <li>✅ <strong>User-Friendly:</strong> Intuitive navigation and scanning</li>
+  <CardContent className="pt-0">
+    <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+      <li className="flex items-start gap-2">
+        <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+        <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Visual Hierarchy:</strong> Clear content organization</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+        <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Flexibility:</strong> Easy to update individual sections</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+        <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Responsive:</strong> Adapts seamlessly to all devices</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+        <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Professional:</strong> Modern, clean appearance</span>
+      </li>
+      <li className="flex items-start gap-2">
+        <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+        <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">User-Friendly:</strong> Intuitive navigation and scanning</span>
+      </li>
     </ul>
   </CardContent>
 </Card>
@@ -104,18 +119,18 @@ The beauty of bento grid layouts lies in their adaptability. They work seamlessl
   </div>
 </div>
 ```
-<div className="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <div className="col-span-1 lg:col-span-2 bg-white p-6 rounded-lg shadow border-1 border-black">
-    {/* Hero content */}
+<div className="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+  <div className="col-span-1 lg:col-span-2 bg-neutral-800/30 dark:bg-neutral-800/30 p-6 rounded-lg shadow-lg border border-neutral-700 dark:border-neutral-700">
+    <p className="text-neutral-400 dark:text-neutral-400 text-sm italic">Hero content</p>
   </div>
-  <div className="bg-white p-6 rounded-lg shadow border-1 border-black">
-    {/* Feature highlight */}
+  <div className="bg-neutral-800/30 dark:bg-neutral-800/30 p-6 rounded-lg shadow-lg border border-neutral-700 dark:border-neutral-700">
+    <p className="text-neutral-400 dark:text-neutral-400 text-sm italic">Feature highlight</p>
   </div>
-  <div className="bg-white p-6 rounded-lg shadow border-1 border-black">
-    {/* Testimonial */}
+  <div className="bg-neutral-800/30 dark:bg-neutral-800/30 p-6 rounded-lg shadow-lg border border-neutral-700 dark:border-neutral-700">
+    <p className="text-neutral-400 dark:text-neutral-400 text-sm italic">Testimonial</p>
   </div>
-  <div className="col-span-1 md:col-span-2 bg-white p-6 rounded-lg shadow border-1 border-black">
-    {/* Call to action */}
+  <div className="col-span-1 md:col-span-2 bg-neutral-800/30 dark:bg-neutral-800/30 p-6 rounded-lg shadow-lg border border-neutral-700 dark:border-neutral-700">
+    <p className="text-neutral-400 dark:text-neutral-400 text-sm italic">Call to action</p>
   </div>
 </div>
 ## Essential Mobile UI Patterns Examples
@@ -126,56 +141,101 @@ With over 60% of web traffic coming from mobile devices, understanding **mobile 
 
 Navigation patterns have evolved significantly, with the hamburger menu giving way to more discoverable options like tab bars and floating action buttons. Studies show that visible navigation elements can increase engagement by up to 35%, making this a critical consideration for small businesses looking to maximize their mobile presence. The key is choosing patterns that align with your users' expectations while maintaining brand consistency.
 
-<Tabs defaultValue="patterns" className="my-6">
-  <TabsList className="grid w-full grid-cols-3">
-    <TabsTrigger value="patterns" className="cursor-pointer">Common Patterns</TabsTrigger>
-    <TabsTrigger value="best-practices" className="cursor-pointer">Best Practices</TabsTrigger>
-    <TabsTrigger value="mistakes" className="cursor-pointer">Avoid These</TabsTrigger>
+<Tabs defaultValue="patterns" className="my-8">
+  <TabsList className="grid w-full grid-cols-3 bg-neutral-800/50 dark:bg-neutral-800/50 border border-neutral-700 dark:border-neutral-700">
+    <TabsTrigger value="patterns" className="cursor-pointer data-[state=active]:bg-neutral-700 dark:data-[state=active]:bg-neutral-700 data-[state=active]:text-neutral-100 dark:data-[state=active]:text-neutral-100 text-neutral-400 dark:text-neutral-400">Common Patterns</TabsTrigger>
+    <TabsTrigger value="best-practices" className="cursor-pointer data-[state=active]:bg-neutral-700 dark:data-[state=active]:bg-neutral-700 data-[state=active]:text-neutral-100 dark:data-[state=active]:text-neutral-100 text-neutral-400 dark:text-neutral-400">Best Practices</TabsTrigger>
+    <TabsTrigger value="mistakes" className="cursor-pointer data-[state=active]:bg-neutral-700 dark:data-[state=active]:bg-neutral-700 data-[state=active]:text-neutral-100 dark:data-[state=active]:text-neutral-100 text-neutral-400 dark:text-neutral-400">Avoid These</TabsTrigger>
   </TabsList>
-  <TabsContent value="patterns">
-    <Card>
-      <CardHeader>
-        <CardTitle>Popular Mobile UI Patterns</CardTitle>
+  <TabsContent value="patterns" className="mt-6">
+    <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+      <CardHeader className="pb-4">
+        <CardTitle className="text-xl font-bold text-neutral-100 dark:text-neutral-100">Popular Mobile UI Patterns</CardTitle>
       </CardHeader>
-      <CardContent>
-        <ul className="space-y-2">
-          <li>📱 <strong>Tab Bar Navigation:</strong> Bottom navigation for primary actions</li>
-          <li>🎯 <strong>Floating Action Button:</strong> Primary action always visible</li>
-          <li>📋 <strong>Card-Based Layouts:</strong> Scannable content blocks</li>
-          <li>👆 <strong>Swipe Gestures:</strong> Natural interaction patterns</li>
-          <li>🔍 <strong>Progressive Disclosure:</strong> Show details on demand</li>
+      <CardContent className="pt-0">
+        <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+          <li className="flex items-start gap-2">
+            <span className="text-blue-400 dark:text-blue-400 mt-1">📱</span>
+            <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Tab Bar Navigation:</strong> Bottom navigation for primary actions</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-blue-400 dark:text-blue-400 mt-1">🎯</span>
+            <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Floating Action Button:</strong> Primary action always visible</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-blue-400 dark:text-blue-400 mt-1">📋</span>
+            <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Card-Based Layouts:</strong> Scannable content blocks</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-blue-400 dark:text-blue-400 mt-1">👆</span>
+            <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Swipe Gestures:</strong> Natural interaction patterns</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-blue-400 dark:text-blue-400 mt-1">🔍</span>
+            <span className="text-[16px] leading-relaxed"><strong className="text-neutral-100 dark:text-neutral-100">Progressive Disclosure:</strong> Show details on demand</span>
+          </li>
         </ul>
       </CardContent>
     </Card>
   </TabsContent>
-  <TabsContent value="best-practices">
-    <Card>
-      <CardHeader>
-        <CardTitle>Mobile UI Best Practices</CardTitle>
+  <TabsContent value="best-practices" className="mt-6">
+    <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+      <CardHeader className="pb-4">
+        <CardTitle className="text-xl font-bold text-neutral-100 dark:text-neutral-100">Mobile UI Best Practices</CardTitle>
       </CardHeader>
-      <CardContent>
-        <ul className="space-y-2">
-          <li>✅ Minimum 44x44px touch targets</li>
-          <li>✅ 8px minimum spacing between interactive elements</li>
-          <li>✅ Thumb-friendly zone optimization</li>
-          <li>✅ Single-column layouts for easy scrolling</li>
-          <li>✅ Persistent navigation visibility</li>
+      <CardContent className="pt-0">
+        <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+          <li className="flex items-start gap-2">
+            <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+            <span className="text-[16px] leading-relaxed">Minimum 44x44px touch targets</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+            <span className="text-[16px] leading-relaxed">8px minimum spacing between interactive elements</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+            <span className="text-[16px] leading-relaxed">Thumb-friendly zone optimization</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+            <span className="text-[16px] leading-relaxed">Single-column layouts for easy scrolling</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-green-400 dark:text-green-400 mt-1">✅</span>
+            <span className="text-[16px] leading-relaxed">Persistent navigation visibility</span>
+          </li>
         </ul>
       </CardContent>
     </Card>
   </TabsContent>
-  <TabsContent value="mistakes">
-    <Card>
-      <CardHeader>
-        <CardTitle>Common Mistakes to Avoid</CardTitle>
+  <TabsContent value="mistakes" className="mt-6">
+    <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+      <CardHeader className="pb-4">
+        <CardTitle className="text-xl font-bold text-neutral-100 dark:text-neutral-100">Common Mistakes to Avoid</CardTitle>
       </CardHeader>
-      <CardContent>
-        <ul className="space-y-2">
-          <li>❌ Too small touch targets</li>
-          <li>❌ Hidden critical navigation</li>
-          <li>❌ Desktop-only hover states</li>
-          <li>❌ Fixed viewport widths</li>
-          <li>❌ Unnecessary pop-ups on mobile</li>
+      <CardContent className="pt-0">
+        <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+          <li className="flex items-start gap-2">
+            <span className="text-red-400 dark:text-red-400 mt-1">❌</span>
+            <span className="text-[16px] leading-relaxed">Too small touch targets</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-400 dark:text-red-400 mt-1">❌</span>
+            <span className="text-[16px] leading-relaxed">Hidden critical navigation</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-400 dark:text-red-400 mt-1">❌</span>
+            <span className="text-[16px] leading-relaxed">Desktop-only hover states</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-400 dark:text-red-400 mt-1">❌</span>
+            <span className="text-[16px] leading-relaxed">Fixed viewport widths</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-400 dark:text-red-400 mt-1">❌</span>
+            <span className="text-[16px] leading-relaxed">Unnecessary pop-ups on mobile</span>
+          </li>
         </ul>
       </CardContent>
     </Card>
@@ -194,27 +254,31 @@ Touch-friendly interfaces require careful attention to spacing and sizing. Inter
 
 Dark mode implementations can reduce screen energy consumption by up to 63% on OLED displays while providing users with a comfortable viewing option. This dual benefit of user preference and energy efficiency makes dark mode a smart investment for forward-thinking small businesses.
 
-<div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg my-6">
-  <h4 className="text-lg font-semibold mb-3">Energy Savings by Design Choice</h4>
-  <div className="space-y-3">
-    <div className="flex justify-between items-center">
-      <span>Dark Mode (OLED)</span>
-      <span className="font-bold text-green-600">-63% energy</span>
+<Card className="my-8 border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30">
+  <CardHeader className="pb-4">
+    <CardTitle className="text-xl font-bold text-neutral-100 dark:text-neutral-100">Energy Savings by Design Choice</CardTitle>
+  </CardHeader>
+  <CardContent className="pt-0">
+    <div className="space-y-4">
+      <div className="flex justify-between items-center py-2 border-b border-neutral-700 dark:border-neutral-700">
+        <span className="text-neutral-200 dark:text-neutral-200 text-[16px]">Dark Mode (OLED)</span>
+        <span className="font-bold text-green-400 dark:text-green-400 text-lg">-63% energy</span>
+      </div>
+      <div className="flex justify-between items-center py-2 border-b border-neutral-700 dark:border-neutral-700">
+        <span className="text-neutral-200 dark:text-neutral-200 text-[16px]">Optimized Images</span>
+        <span className="font-bold text-green-400 dark:text-green-400 text-lg">-45% bandwidth</span>
+      </div>
+      <div className="flex justify-between items-center py-2 border-b border-neutral-700 dark:border-neutral-700">
+        <span className="text-neutral-200 dark:text-neutral-200 text-[16px]">Lazy Loading</span>
+        <span className="font-bold text-green-400 dark:text-green-400 text-lg">-35% initial load</span>
+      </div>
+      <div className="flex justify-between items-center py-2">
+        <span className="text-neutral-200 dark:text-neutral-200 text-[16px]">Minimalist Design</span>
+        <span className="font-bold text-green-400 dark:text-green-400 text-lg">-40% page weight</span>
+      </div>
     </div>
-    <div className="flex justify-between items-center">
-      <span>Optimized Images</span>
-      <span className="font-bold text-green-600">-45% bandwidth</span>
-    </div>
-    <div className="flex justify-between items-center">
-      <span>Lazy Loading</span>
-      <span className="font-bold text-green-600">-35% initial load</span>
-    </div>
-    <div className="flex justify-between items-center">
-      <span>Minimalist Design</span>
-      <span className="font-bold text-green-600">-40% page weight</span>
-    </div>
-  </div>
-</div>
+  </CardContent>
+</Card>
 
 ### Performance Optimization Techniques
 
@@ -236,43 +300,88 @@ Understanding basic **UI elements for beginners** empowers small business owners
 
 Buttons, forms, and navigation menus form the trinity of essential UI elements:
 
-<div className="grid md:grid-cols-3 gap-4 my-6">
-  <Card>
-    <CardHeader>
-      <CardTitle>🔘 Buttons</CardTitle>
+<div className="grid md:grid-cols-3 gap-6 my-8">
+  <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+    <CardHeader className="pb-4">
+      <CardTitle className="text-xl font-bold text-balance leading-tight text-neutral-100 dark:text-neutral-100 flex items-center gap-2">
+        <span className="text-2xl">🔘</span>
+        <span>Buttons</span>
+      </CardTitle>
     </CardHeader>
-    <CardContent>
-      <ul className="text-sm space-y-1">
-        <li>• Clear action text</li>
-        <li>• Visual feedback</li>
-        <li>• Consistent styling</li>
-        <li>• Proper contrast</li>
+    <CardContent className="pt-0">
+      <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Clear action text</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Visual feedback</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Consistent styling</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Proper contrast</span>
+        </li>
       </ul>
     </CardContent>
   </Card>
-  <Card>
-    <CardHeader>
-      <CardTitle>📝 Forms</CardTitle>
+  <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+    <CardHeader className="pb-4">
+      <CardTitle className="text-xl font-bold text-balance leading-tight text-neutral-100 dark:text-neutral-100 flex items-center gap-2">
+        <span className="text-2xl">📝</span>
+        <span>Forms</span>
+      </CardTitle>
     </CardHeader>
-    <CardContent>
-      <ul className="text-sm space-y-1">
-        <li>• Logical flow</li>
-        <li>• Clear labels</li>
-        <li>• Helpful errors</li>
-        <li>• Progress indicators</li>
+    <CardContent className="pt-0">
+      <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Logical flow</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Clear labels</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Helpful errors</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Progress indicators</span>
+        </li>
       </ul>
     </CardContent>
   </Card>
-  <Card>
-    <CardHeader>
-      <CardTitle>🗂️ Navigation</CardTitle>
+  <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">
+    <CardHeader className="pb-4">
+      <CardTitle className="text-xl font-bold text-balance leading-tight text-neutral-100 dark:text-neutral-100 flex items-center gap-2">
+        <span className="text-2xl">🗂️</span>
+        <span>Navigation</span>
+      </CardTitle>
     </CardHeader>
-    <CardContent>
-      <ul className="text-sm space-y-1">
-        <li>• Clear hierarchy</li>
-        <li>• Consistent position</li>
-        <li>• Mobile-friendly</li>
-        <li>• Search option</li>
+    <CardContent className="pt-0">
+      <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Clear hierarchy</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Consistent position</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Mobile-friendly</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-blue-400 dark:text-blue-400 mt-1">•</span>
+          <span className="text-[16px] leading-relaxed">Search option</span>
+        </li>
       </ul>
     </CardContent>
   </Card>
@@ -282,27 +391,64 @@ Buttons, forms, and navigation menus form the trinity of essential UI elements:
 
 Common mistakes include inconsistent styling, poor color contrast, and overlooking accessibility features. Small businesses often fall into the trap of over-designing, adding elements that confuse rather than clarify. The most effective interfaces maintain consistency across all elements, using a limited color palette and clear typography to create professional, trustworthy experiences.
 
-<Alert variant="destructive" className="my-6">
-  <AlertDescription>
-    ⚠️ **Warning:** Avoid these common UI mistakes:
-    - Inconsistent button styles across pages
-    - Using color alone to convey information
-    - Forgetting focus states for keyboard navigation
-    - Ignoring loading states for async operations
-    - Overusing animations and effects
+<Alert className="my-8 border-red-500/20 bg-red-500/10 dark:bg-red-500/10">
+  <AlertDescription className="text-neutral-200 dark:text-neutral-200 text-[17px] leading-relaxed">
+    <div className="flex items-start gap-2">
+      <span className="text-red-400 dark:text-red-400 mt-1">⚠️</span>
+      <div className="space-y-2">
+        <p><strong className="text-red-400 dark:text-red-400">Warning:</strong> Avoid these common UI mistakes:</p>
+        <ul className="list-disc list-inside space-y-1 ml-4 text-neutral-300 dark:text-neutral-300">
+          <li>Inconsistent button styles across pages</li>
+          <li>Using color alone to convey information</li>
+          <li>Forgetting focus states for keyboard navigation</li>
+          <li>Ignoring loading states for async operations</li>
+          <li>Overusing animations and effects</li>
+        </ul>
+      </div>
+    </div>
   </AlertDescription>
 </Alert>
 
 ### Quick Implementation Checklist
 
-- [ ] Establish a consistent color palette (max 5 colors)
-- [ ] Define typography hierarchy (3-4 font sizes)
-- [ ] Create reusable button styles (primary, secondary, tertiary)
-- [ ] Design form validation messages
-- [ ] Set up responsive breakpoints
-- [ ] Test with real users
-- [ ] Implement accessibility features
-- [ ] Document design decisions
+<Card className="my-8 border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30">
+  <CardContent className="pt-6">
+    <ul className="space-y-3 text-neutral-200 dark:text-neutral-200">
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Establish a consistent color palette (max 5 colors)</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Define typography hierarchy (3-4 font sizes)</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Create reusable button styles (primary, secondary, tertiary)</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Design form validation messages</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Set up responsive breakpoints</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Test with real users</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Implement accessibility features</span>
+      </li>
+      <li className="flex items-start gap-3">
+        <input type="checkbox" className="mt-1 w-5 h-5 rounded border-neutral-600 dark:border-neutral-600 bg-neutral-800 dark:bg-neutral-800 text-blue-500 dark:text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500" />
+        <span className="text-[16px] leading-relaxed">Document design decisions</span>
+      </li>
+    </ul>
+  </CardContent>
+</Card>
 
 ## Conclusion
 
@@ -310,28 +456,46 @@ Creating effective UI design for small businesses doesn't require enormous budge
 
 The key is starting with one improvement at a time. Choose a single aspect of your interface—perhaps implementing a bento grid on your homepage or optimizing your mobile navigation—and measure the results. Each enhancement builds upon the last, gradually transforming your digital presence into a powerful business asset.
 
-<Card className="bg-gradient-to-r from-blue-500 to-purple-600 text-white my-8">
-  <CardHeader>
-    <CardTitle className="text-2xl">Ready to Transform Your UI?</CardTitle>
-    <CardDescription className="text-gray-100">
+<Card className="my-8 border-blue-500/30 dark:border-blue-500/30 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-blue-600/20 dark:from-blue-500/20 dark:via-purple-500/20 dark:to-blue-600/20 backdrop-blur-sm">
+  <CardHeader className="pb-4">
+    <CardTitle className="text-2xl font-bold text-neutral-100 dark:text-neutral-100">Ready to Transform Your UI?</CardTitle>
+    <CardDescription className="text-neutral-300 dark:text-neutral-300 mt-2 text-[16px]">
       Take the first step toward a better user interface today
     </CardDescription>
   </CardHeader>
-  <CardContent className="space-y-4">
-    <p>Start by auditing your current design against the principles outlined in this guide. Identify your biggest pain points, prioritize improvements based on user impact, and begin your journey toward a more effective, sustainable, and user-friendly digital presence.</p>
+  <CardContent className="pt-0 space-y-4">
+    <p className="text-neutral-200 dark:text-neutral-200 text-[17px] leading-relaxed">Start by auditing your current design against the principles outlined in this guide. Identify your biggest pain points, prioritize improvements based on user impact, and begin your journey toward a more effective, sustainable, and user-friendly digital presence.</p>
     <div className="flex gap-4">
-    <Link href="https://cal.com/chernow-unlimited/30min" target="_blank">
-      <Button variant="outline" size="lg" className="cursor-pointer bg-purple-500 !flex !flex-col !items-center !justify-center text-white border-white hover:bg-white hover:text-purple-600">
-        <p>Get Free Consultation</p>
-      </Button>
+      <Link href="https://cal.com/chernow-unlimited/30min" target="_blank" rel="noopener noreferrer">
+        <Button variant="outline" size="lg" className="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white border-blue-400 hover:border-blue-500 transition-all duration-200">
+          Get Free Consultation
+        </Button>
       </Link>
     </div>
   </CardContent>
 </Card>
 
 ## Resources & Links
-- <Link href="https://material.io/design" target="_blank" rel="noopener noreferrer" className="underline">Google Material Design Guidelines</Link>
-- <Link href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer" className="underline">WebAIM Accessibility Checker</Link>
-- <Link href="https://www.nngroup.com/articles/mobile-usability/" target="_blank" rel="noopener noreferrer" className="underline">Nielsen Norman Group - Mobile Usability</Link>
-- <Link href="https://www.carbondesignsystem.com/" target="_blank" rel="noopener noreferrer" className="underline">IBM Carbon Design System</Link>
-- <Link href="https://dribbble.com/tags/ui" target="_blank" rel="noopener noreferrer" className="underline">Dribbble UI Inspiration</Link>
+
+<div className="my-8 space-y-3">
+  <div className="flex items-center gap-3 p-4 rounded-lg border border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200">
+    <span className="text-blue-400 dark:text-blue-400">🔗</span>
+    <a href="https://material.io/design" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-medium underline decoration-blue-500/50 dark:decoration-blue-500/50 hover:decoration-blue-400 dark:hover:decoration-blue-400 underline-offset-2 transition-all duration-150 text-[16px]">Google Material Design Guidelines</a>
+  </div>
+  <div className="flex items-center gap-3 p-4 rounded-lg border border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200">
+    <span className="text-blue-400 dark:text-blue-400">🔗</span>
+    <a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-medium underline decoration-blue-500/50 dark:decoration-blue-500/50 hover:decoration-blue-400 dark:hover:decoration-blue-400 underline-offset-2 transition-all duration-150 text-[16px]">WebAIM Accessibility Checker</a>
+  </div>
+  <div className="flex items-center gap-3 p-4 rounded-lg border border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200">
+    <span className="text-blue-400 dark:text-blue-400">🔗</span>
+    <a href="https://www.nngroup.com/articles/mobile-usability/" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-medium underline decoration-blue-500/50 dark:decoration-blue-500/50 hover:decoration-blue-400 dark:hover:decoration-blue-400 underline-offset-2 transition-all duration-150 text-[16px]">Nielsen Norman Group - Mobile Usability</a>
+  </div>
+  <div className="flex items-center gap-3 p-4 rounded-lg border border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200">
+    <span className="text-blue-400 dark:text-blue-400">🔗</span>
+    <a href="https://www.carbondesignsystem.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-medium underline decoration-blue-500/50 dark:decoration-blue-500/50 hover:decoration-blue-400 dark:hover:decoration-blue-400 underline-offset-2 transition-all duration-150 text-[16px]">IBM Carbon Design System</a>
+  </div>
+  <div className="flex items-center gap-3 p-4 rounded-lg border border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200">
+    <span className="text-blue-400 dark:text-blue-400">🔗</span>
+    <a href="https://dribbble.com/tags/ui" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-medium underline decoration-blue-500/50 dark:decoration-blue-500/50 hover:decoration-blue-400 dark:hover:decoration-blue-400 underline-offset-2 transition-all duration-150 text-[16px]">Dribbble UI Inspiration</a>
+  </div>
+</div>

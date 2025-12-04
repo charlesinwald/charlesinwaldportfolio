@@ -68,7 +68,7 @@ export default function Page() {
           ].map((experience, index) => (
             <div className="mb-6" key={index}>
               <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gruvbox-card w-full h-full flex flex-col">
-                <CardContent className="flex-grow">
+                <CardContent className="flex-grow py-4">
                   <div className="flex items-center mb-4">
                     <Image
                       src={experience.imagePath}
@@ -172,7 +172,7 @@ export default function Page() {
           Volunteering
         </h2>
         <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gruvbox-card w-full h-full flex flex-col">
-          <CardContent className="flex-grow">
+          <CardContent className="flex-grow py-4">
             <div className="flex items-center mb-4">
               <Image
                 src="/codeandcoffee.webp"

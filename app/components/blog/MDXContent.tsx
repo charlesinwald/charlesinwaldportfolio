@@ -18,18 +18,18 @@ const components = {
     <h1 className="text-3xl lg:text-4xl font-bold mt-12 mb-6 text-balance leading-tight text-neutral-100 dark:text-neutral-100 scroll-mt-20" id={props.id} {...props} />
   ),
   h2: (props: any) => (
-    <h2 className="text-2xl lg:text-3xl font-bold mt-10 mb-5 text-balance leading-tight text-neutral-100 dark:text-neutral-100 scroll-mt-20" id={props.id} {...props} />
+    <h2 className="text-2xl lg:text-3xl font-bold mt-12 mb-6 text-balance leading-tight text-neutral-100 dark:text-neutral-100 scroll-mt-20" id={props.id} {...props} />
   ),
   h3: (props: any) => (
-    <h3 className="text-xl lg:text-2xl font-semibold mt-8 mb-4 text-balance leading-snug text-neutral-100 dark:text-neutral-100 scroll-mt-20" id={props.id} {...props} />
+    <h3 className="text-xl lg:text-2xl font-semibold mt-10 mb-5 text-balance leading-snug text-neutral-100 dark:text-neutral-100 scroll-mt-20" id={props.id} {...props} />
   ),
   h4: (props: any) => <h4 className="text-lg lg:text-xl font-semibold mt-6 mb-3 leading-snug text-neutral-100 dark:text-neutral-100 scroll-mt-20" id={props.id} {...props} />,
 
-  p: (props: any) => <p className="mb-5 text-[17px] leading-[1.8] text-pretty text-neutral-200 dark:text-neutral-200" {...props} />,
+  p: (props: any) => <p className="mb-6 text-[18px] leading-[2.0] text-pretty text-neutral-100 dark:text-neutral-100" {...props} />,
 
-  ul: (props: any) => <ul className="list-disc list-outside ml-6 mb-6 space-y-2.5 text-neutral-200 dark:text-neutral-200" {...props} />,
-  ol: (props: any) => <ol className="list-decimal list-outside ml-6 mb-6 space-y-2.5 text-neutral-200 dark:text-neutral-200" {...props} />,
-  li: (props: any) => <li className="leading-[1.75] pl-2 marker:text-neutral-400 dark:marker:text-neutral-400" {...props} />,
+  ul: (props: any) => <ul className="list-disc list-outside ml-6 mb-6 space-y-4 text-neutral-100 dark:text-neutral-100" {...props} />,
+  ol: (props: any) => <ol className="list-decimal list-outside ml-6 mb-6 space-y-4 text-neutral-100 dark:text-neutral-100" {...props} />,
+  li: (props: any) => <li className="leading-[2.0] pl-2 text-[18px] marker:text-neutral-400 dark:marker:text-neutral-400" {...props} />,
 
   a: (props: any) => {
     const isExternal = props.href && (props.href.startsWith('http://') || props.href.startsWith('https://'))
@@ -47,7 +47,7 @@ const components = {
 
   blockquote: (props: any) => (
     <blockquote
-      className="border-l-4 border-neutral-500 dark:border-neutral-500 pl-6 py-3 my-8 text-neutral-300 dark:text-neutral-300 bg-neutral-800/50 dark:bg-neutral-800/50 rounded-r-lg italic"
+      className="border-l-4 border-neutral-500 dark:border-neutral-500 pl-6 py-4 my-8 text-[18px] leading-[2.0] text-neutral-200 dark:text-neutral-200 bg-neutral-800/50 dark:bg-neutral-800/50 rounded-r-lg italic"
       {...props}
     />
   ),

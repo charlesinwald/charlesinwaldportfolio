@@ -167,21 +167,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       </header>
 
       {/* Article Content */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-20">
-        <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none
-          prose-headings:font-bold prose-headings:tracking-tight
-          prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-          prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
-          prose-p:text-[17px] prose-p:leading-[1.8] prose-p:mb-6
-          prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline
-          prose-strong:font-semibold prose-strong:text-foreground
-          prose-code:text-sm prose-code:bg-neutral-100 dark:prose-code:bg-neutral-800
-          prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
-          prose-pre:bg-neutral-900 prose-pre:border prose-pre:border-neutral-800
-          prose-ul:my-6 prose-ol:my-6 prose-li:my-2
-          prose-blockquote:border-l-4 prose-blockquote:border-neutral-300 dark:prose-blockquote:border-neutral-700
-          prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-neutral-700 dark:prose-blockquote:text-neutral-300
-          prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 mb-20">
+        <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none">
           <MDXContent source={post.content} />
         </div>
       </div>
