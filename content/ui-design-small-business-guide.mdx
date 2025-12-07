@@ -34,8 +34,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -142,10 +140,10 @@ With over 60% of web traffic coming from mobile devices, understanding **mobile 
 Navigation patterns have evolved significantly, with the hamburger menu giving way to more discoverable options like tab bars and floating action buttons. Studies show that visible navigation elements can increase engagement by up to 35%, making this a critical consideration for small businesses looking to maximize their mobile presence. The key is choosing patterns that align with your users' expectations while maintaining brand consistency.
 
 <Tabs defaultValue="patterns" className="my-8">
-  <TabsList className="grid w-full grid-cols-3 bg-neutral-800/50 dark:bg-neutral-800/50 border border-neutral-700 dark:border-neutral-700">
-    <TabsTrigger value="patterns" className="cursor-pointer data-[state=active]:bg-neutral-700 dark:data-[state=active]:bg-neutral-700 data-[state=active]:text-neutral-100 dark:data-[state=active]:text-neutral-100 text-neutral-400 dark:text-neutral-400">Common Patterns</TabsTrigger>
-    <TabsTrigger value="best-practices" className="cursor-pointer data-[state=active]:bg-neutral-700 dark:data-[state=active]:bg-neutral-700 data-[state=active]:text-neutral-100 dark:data-[state=active]:text-neutral-100 text-neutral-400 dark:text-neutral-400">Best Practices</TabsTrigger>
-    <TabsTrigger value="mistakes" className="cursor-pointer data-[state=active]:bg-neutral-700 dark:data-[state=active]:bg-neutral-700 data-[state=active]:text-neutral-100 dark:data-[state=active]:text-neutral-100 text-neutral-400 dark:text-neutral-400">Avoid These</TabsTrigger>
+  <TabsList className="grid w-full grid-cols-3 bg-neutral-800/40 dark:bg-neutral-800/40 border border-neutral-700/50 dark:border-neutral-700/50 rounded-lg p-1">
+    <TabsTrigger value="patterns" className="cursor-pointer transition-all duration-200 ease-in-out data-[state=active]:bg-neutral-700/60 dark:data-[state=active]:bg-neutral-700/60 data-[state=active]:text-neutral-50 dark:data-[state=active]:text-neutral-50 bg-neutral-800/30 dark:bg-neutral-800/30 text-neutral-400 dark:text-neutral-400 hover:text-neutral-200 dark:hover:text-neutral-200 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 rounded-md py-2">Common Patterns</TabsTrigger>
+    <TabsTrigger value="best-practices" className="cursor-pointer transition-all duration-200 ease-in-out data-[state=active]:bg-neutral-700/60 dark:data-[state=active]:bg-neutral-700/60 data-[state=active]:text-neutral-50 dark:data-[state=active]:text-neutral-50 bg-neutral-800/30 dark:bg-neutral-800/30 text-neutral-400 dark:text-neutral-400 hover:text-neutral-200 dark:hover:text-neutral-200 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 rounded-md py-2">Best Practices</TabsTrigger>
+    <TabsTrigger value="mistakes" className="cursor-pointer transition-all duration-200 ease-in-out data-[state=active]:bg-neutral-700/60 dark:data-[state=active]:bg-neutral-700/60 data-[state=active]:text-neutral-50 dark:data-[state=active]:text-neutral-50 bg-neutral-800/30 dark:bg-neutral-800/30 text-neutral-400 dark:text-neutral-400 hover:text-neutral-200 dark:hover:text-neutral-200 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 rounded-md py-2">Avoid These</TabsTrigger>
   </TabsList>
   <TabsContent value="patterns" className="mt-6">
     <Card className="border-neutral-700 dark:border-neutral-700 bg-neutral-800/30 dark:bg-neutral-800/30 hover:bg-neutral-800/50 dark:hover:bg-neutral-800/50 transition-all duration-200 hover:shadow-lg">

@@ -7,6 +7,7 @@ import { AuthorProfile } from "app/components/blog/AuthorProfile";
 import { metaData } from "app/config";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export async function generateStaticParams() {
   const posts = getAllBlogPosts();
@@ -106,86 +107,91 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       />
 
       {/* Back Button */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-12">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 pt-16">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-neutral-400 dark:text-neutral-400 hover:text-neutral-200 dark:hover:text-neutral-200 transition-colors duration-200 mb-8"
+          className="inline-flex items-center gap-2 text-neutral-500 dark:text-neutral-500 hover:text-neutral-200 dark:hover:text-neutral-200 transition-colors duration-200 mb-12 group"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" />
           <span className="text-sm font-medium">Back to Blog</span>
         </Link>
       </div>
 
       {/* Article Header */}
-      <header className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-16">
+      <header className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 mb-20">
         {/* Category Badge */}
         {category && (
-          <div className="mb-6">
-            <span className="inline-block px-4 py-1.5 text-xs font-semibold rounded-full bg-neutral-800 dark:bg-neutral-800 text-neutral-200 dark:text-neutral-200 border border-neutral-700 dark:border-neutral-700">
+          <div className="mb-8">
+            <span className="inline-block px-4 py-2 text-xs font-semibold rounded-lg bg-neutral-900/80 dark:bg-neutral-900/80 text-neutral-300 dark:text-neutral-300 border border-neutral-800/60 dark:border-neutral-800/60 backdrop-blur-sm">
               {category}
             </span>
           </div>
         )}
 
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 text-balance leading-[1.1] tracking-tight text-neutral-100 dark:text-neutral-100">
-          {title}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 text-balance leading-[1.1] tracking-tight">
+          <span className="bg-gradient-to-r from-neutral-50 via-neutral-100 to-neutral-200 dark:from-neutral-50 dark:via-neutral-100 dark:to-neutral-200 bg-clip-text text-transparent">
+            {title}
+          </span>
         </h1>
 
         {/* Meta Information */}
-        <div className="flex flex-wrap items-center gap-3 text-sm text-neutral-400 dark:text-neutral-400 mb-8 pb-8 border-b border-neutral-700 dark:border-neutral-700">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-400 dark:text-neutral-400 mb-10 pb-10 border-b border-neutral-800/60 dark:border-neutral-800/60">
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4" />
-            <time dateTime={date}>{formatDate(date)}</time>
+            <Calendar className="w-4 h-4 text-neutral-500 dark:text-neutral-500" />
+            <time dateTime={date} className="font-medium">{formatDate(date)}</time>
           </div>
-          <span className="text-neutral-600 dark:text-neutral-600">•</span>
+          <span className="text-neutral-700 dark:text-neutral-700">•</span>
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4" />
-            <span>{readingTime}</span>
+            <Clock className="w-4 h-4 text-neutral-500 dark:text-neutral-500" />
+            <span className="font-medium">{readingTime}</span>
           </div>
           {author && (
             <>
-              <span className="text-neutral-600 dark:text-neutral-600">•</span>
-              <span>By {author}</span>
+              <span className="text-neutral-700 dark:text-neutral-700">•</span>
+              <span className="font-medium">By {author}</span>
             </>
           )}
         </div>
 
         {/* Tags */}
-        {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-8">
+        {/* {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2.5">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1.5 text-xs font-medium rounded-full bg-neutral-800 dark:bg-neutral-800 text-neutral-200 dark:text-neutral-200 border border-neutral-700 dark:border-neutral-700 hover:bg-neutral-700 dark:hover:bg-neutral-700 transition-colors"
+                className="px-4 py-2 text-xs font-medium rounded-lg bg-neutral-900/60 dark:bg-neutral-900/60 text-neutral-300 dark:text-neutral-300 border border-neutral-800/60 dark:border-neutral-800/60 hover:bg-neutral-900/80 dark:hover:bg-neutral-900/80 hover:border-neutral-700/80 dark:hover:border-neutral-700/80 transition-all duration-200 backdrop-blur-sm"
               >
                 {tag}
               </span>
             ))}
           </div>
-        )}
+        )} */}
       </header>
 
       {/* Article Content */}
-      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 mb-20">
-        <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 mb-24">
+        <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none prose-headings:text-neutral-100 dark:prose-headings:text-neutral-100 prose-headings:font-bold prose-headings:tracking-tight prose-p:text-neutral-300 dark:prose-p:text-neutral-300 prose-p:leading-relaxed prose-a:text-neutral-200 dark:prose-a:text-neutral-200 prose-a:no-underline hover:prose-a:underline prose-strong:text-neutral-200 dark:prose-strong:text-neutral-200 prose-code:text-neutral-300 dark:prose-code:text-neutral-300 prose-pre:bg-neutral-900/80 dark:prose-pre:bg-neutral-900/80 prose-pre:border prose-pre:border-neutral-800/60 dark:prose-pre:border-neutral-800/60">
+          <Image src={post.metadata.image || ""} alt="Small business website UI transformation showing improved design" width={1000} height={1000} />
           <MDXContent source={post.content} />
         </div>
       </div>
 
       {/* Author Profile */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-12">
-        <AuthorProfile
-          author={author || metaData.name}
-          date={date}
-          readingTime={readingTime}
-        />
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 mb-16">
+        <div className="bg-neutral-900/50 dark:bg-neutral-900/50 backdrop-blur-sm border border-neutral-800/60 dark:border-neutral-800/60 rounded-2xl p-8">
+          <AuthorProfile
+            author={author || metaData.name}
+            date={date}
+            readingTime={readingTime}
+          />
+        </div>
       </div>
 
       {/* Share Buttons Bottom */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-16">
-        <div className="border-t border-neutral-700 dark:border-neutral-700 pt-8">
-          <p className="text-sm text-neutral-400 dark:text-neutral-400 mb-4">
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 mb-20">
+        <div className="border-t border-neutral-800/60 dark:border-neutral-800/60 pt-10">
+          <p className="text-sm text-neutral-400 dark:text-neutral-400 mb-6 font-medium">
             Share this article:
           </p>
           <ShareButtons title={title} url={url} />
