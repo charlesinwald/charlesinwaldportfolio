@@ -39,7 +39,7 @@ export function BlogPageClient({ posts }: BlogPageClientProps) {
   return (
     <div className="min-h-screen py-16 sm:py-20">
       <ThreeBackground />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative bg-neutral-900/70 dark:bg-neutral-900/0 py-12">
         {/* Header Section */}
         <div className="mb-16 text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance tracking-tight">
