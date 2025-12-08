@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 
 // Import all infographic renderers
 const renderers: Record<string, React.ComponentType<any>> = {
-  speed: dynamic(() => import("./infographics/SpeedGaugeInfographic"), {
+  "speed-impact": dynamic(() => import("./infographics/SpeedGaugeInfographic"), {
     loading: () => <div className="w-full h-64 bg-slate-100 rounded-lg animate-pulse" aria-busy="true" aria-label="Loading visualization" />,
     ssr: false
   }),

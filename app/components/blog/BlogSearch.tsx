@@ -41,7 +41,7 @@ export function BlogSearch({ onSearch }: BlogSearchProps) {
         <button
           type="button"
           onClick={handleClear}
-          className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500 dark:text-neutral-500 hover:text-neutral-200 dark:hover:text-neutral-200 transition-colors duration-200"
+          className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-black dark:text-white transition-colors duration-200"
           aria-label="Clear search"
         >
           <X className="w-5 h-5" />

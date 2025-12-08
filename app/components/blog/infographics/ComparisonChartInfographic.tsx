@@ -113,13 +113,13 @@ const ComparisonChartInfographic = () => {
           <div className="w-14 h-14 bg-gradient-to-br from-slate-100 to-slate-200 rounded-[14px] flex items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110 hover:rotate-6">
             <IconComponent type={icon} />
           </div>
-          <div className="text-lg font-bold text-slate-800">{title}</div>
+          <div className="text-lg font-bold text-slate-200 dark:text-neutral-800">{title}</div>
         </div>
 
         <div className="flex flex-col gap-3 pr-4">
           {/* DIY Bar */}
           <div className="relative">
-            <div className="text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wide">{diyLabel}</div>
+            <div className="text-xs font-semibold text-slate-200 mb-1.5 uppercase tracking-wide">{diyLabel}</div>
             <div
               className={`h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 shadow-lg relative overflow-hidden transition-all duration-500 ${
                 hoveredBar === "diy" ? "scale-105 shadow-xl shadow-red-500/50" : "hover:scale-[1.02]"
@@ -135,7 +135,7 @@ const ComparisonChartInfographic = () => {
 
           {/* Professional Bar */}
           <div className="relative">
-            <div className="text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wide">{proLabel}</div>
+            <div className="text-xs font-semibold text-slate-200 mb-1.5 uppercase tracking-wide">{proLabel}</div>
             <div
               className={`h-12 rounded-lg bg-gradient-to-r from-blue-500 to-emerald-500 shadow-lg relative overflow-hidden transition-all duration-500 ${
                 hoveredBar === "pro" ? "scale-105 shadow-xl shadow-blue-500/50" : "hover:scale-[1.02]"
@@ -152,10 +152,10 @@ const ComparisonChartInfographic = () => {
 
         {/* Values Column */}
         <div className="flex flex-col gap-3 text-right">
-          <div className="text-[22px] font-extrabold text-slate-800 h-12 flex items-center justify-end">
+          <div className="text-[22px] font-extrabold text-slate-300 h-12 flex items-center justify-end">
             {diyValue}
           </div>
-          <div className="text-[22px] font-extrabold text-slate-800 h-12 flex items-center justify-end">
+          <div className="text-[22px] font-extrabold text-slate-300 h-12 flex items-center justify-end">
             {proValue}
           </div>
         </div>
@@ -164,15 +164,15 @@ const ComparisonChartInfographic = () => {
   }
 
   return (
-    <div className="w-full max-w-[1400px] bg-white rounded-3xl p-16 shadow-2xl relative mx-auto">
+    <div className="w-full max-w-[1400px] bg-neutral-900/50 dark:bg-neutral-900 rounded-3xl p-16 shadow-2xl relative mx-auto">
       {/* Header */}
       <div
         className={`text-center mb-12 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
         }`}
       >
-        <h2 className="text-5xl font-extrabold text-slate-800 mb-3">DIY vs Professional Website</h2>
-        <p className="text-xl text-slate-500 font-medium">Performance comparison across key metrics</p>
+        <h2 className="text-5xl font-extrabold text-slate-800 dark:text-neutral-100 mb-3">DIY vs Professional Website</h2>
+          <p className="text-xl text-neutral-500 dark:text-neutral-400 font-medium">Performance comparison across key metrics</p>
       </div>
 
       {/* Legend */}
@@ -183,13 +183,13 @@ const ComparisonChartInfographic = () => {
       >
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-red-500 to-orange-500 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
-          <span className="text-lg font-bold text-slate-800 transition-colors duration-300 group-hover:text-red-500">
+          <span className="text-lg font-bold text-neutral-100 dark:text-neutral-900 transition-colors duration-300 group-hover:text-red-500">
             DIY Builder Site
           </span>
         </div>
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" />
-          <span className="text-lg font-bold text-slate-800 transition-colors duration-300 group-hover:text-blue-500">
+              <span className="text-lg font-bold text-neutral-100 dark:text-neutral-900 transition-colors duration-300 group-hover:text-blue-500">
             Professional Site
           </span>
         </div>

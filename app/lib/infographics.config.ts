@@ -6,9 +6,9 @@ type InfographicType =
   | "timeline"
   | "comparison"
   | "cost-comparison"
-  | "speed-gauge"
+  | "speed-impact"
   | "vendor-lock-in"
-  | "template-vs-custom"
+  | "template-comparison"
   | "custom";
 
 interface InfographicConfig {
@@ -41,12 +41,12 @@ const infographicConfigs: Record<string, InfographicConfig> = {
   },
   "template-comparison": {
     id: "template-comparison",
-    type: "template-vs-custom",
+    type: "template-comparison",
     title: "Template vs Custom Design",
   },
   "speed-impact": {
     id: "speed-impact",
-    type: "speed-gauge",
+    type: "speed-impact",
     title: "Page Speed Impact",
   },
 };

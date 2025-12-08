@@ -102,13 +102,24 @@ const TimelineInfographic = () => {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto bg-white rounded-3xl p-12 shadow-2xl">
+    <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .timeline-ring {
+            stroke: #e2e8f0;
+          }
+          .dark .timeline-ring {
+            stroke: #404040;
+          }
+        `
+      }} />
+      <div className="w-full max-w-7xl mx-auto bg-neutral-900/50 dark:bg-neutral-900 rounded-3xl p-12 shadow-2xl dark:shadow-neutral-950/50">
       {/* Header */}
       <div
         className={`text-center mb-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}
       >
-        <h2 className="text-5xl font-extrabold text-slate-800 mb-3 leading-tight">The Hidden Cost of DIY Websites</h2>
-        <p className="text-xl text-slate-500 font-medium">Time investment most entrepreneurs don't calculate</p>
+        <h2 className="text-5xl font-extrabold text-slate-800 dark:text-neutral-100 mb-3 leading-tight">The Hidden Cost of DIY Websites</h2>
+        <p className="text-xl text-slate-500 dark:text-neutral-400 font-medium">Time investment most entrepreneurs don't calculate</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-10 items-center">
@@ -119,9 +130,9 @@ const TimelineInfographic = () => {
               key={task.id}
               onMouseEnter={() => setHoveredTask(task.id)}
               onMouseLeave={() => setHoveredTask(null)}
-              className={`flex items-start gap-3 p-4 bg-slate-50 rounded-xl cursor-pointer transition-all duration-300 border-l-4 ${
+              className={`flex items-start gap-3 p-4 bg-amber-300 dark:bg-neutral-800/50 rounded-xl cursor-pointer transition-all duration-300 border-l-4 ${
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-              } ${hoveredTask === task.id ? "scale-105 shadow-lg bg-white" : "hover:scale-102 hover:shadow-md"}`}
+              } ${hoveredTask === task.id ? "scale-105 shadow-lg bg-white dark:bg-neutral-800" : "hover:scale-102 hover:shadow-md"}`}
               style={{
                 borderLeftColor: task.color,
                 transitionDelay: `${index * 100}ms`,
@@ -134,8 +145,8 @@ const TimelineInfographic = () => {
                 <IconComponent type={task.icon} className="w-7 h-7" />
               </div>
               <div className="flex-1">
-                <div className="text-sm font-bold text-slate-800 mb-1">{task.label}</div>
-                <div className="text-2xl font-extrabold text-orange-500">{task.hours} hrs</div>
+                <div className="text-sm font-bold text-slate-800 dark:text-neutral-200 mb-1">{task.label}</div>
+                <div className="text-2xl font-extrabold text-orange-500 dark:text-orange-400">{task.hours} hrs</div>
               </div>
             </div>
           ))}
@@ -216,18 +227,25 @@ const TimelineInfographic = () => {
             />
 
             {/* Outer ring */}
-            <circle cx="190" cy="190" r="180" fill="none" stroke="#e2e8f0" strokeWidth="3" />
+            <circle 
+              cx="190" 
+              cy="190" 
+              r="180" 
+              fill="none" 
+              className="timeline-ring"
+              strokeWidth="3"
+            />
           </svg>
 
           {/* Center circle with total */}
           <div
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 bg-white rounded-full shadow-xl flex flex-col items-center justify-center z-10 transition-all duration-700 ${
+            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 bg-white dark:bg-neutral-800 rounded-full shadow-xl dark:shadow-neutral-950/50 flex flex-col items-center justify-center z-10 transition-all duration-700 ${
               isVisible ? "opacity-100 scale-100" : "opacity-0 scale-50"
             }`}
             style={{ transitionDelay: "1s" }}
           >
-            <div className="text-6xl font-black text-slate-800 leading-none">{totalHours}</div>
-            <div className="text-base text-slate-500 font-semibold mt-2 uppercase tracking-wider">Hours</div>
+            <div className="text-6xl font-black text-slate-800 dark:text-neutral-100 leading-none">{totalHours}</div>
+            <div className="text-base text-slate-500 dark:text-neutral-400 font-semibold mt-2 uppercase tracking-wider">Hours</div>
           </div>
         </div>
 
@@ -266,12 +284,12 @@ const TimelineInfographic = () => {
 
           {/* Maintenance Note */}
           <div
-            className={`bg-amber-100 border-2 border-amber-400 p-4 rounded-xl text-center transition-all duration-700 hover:scale-105 ${
+            className={`bg-amber-100 dark:bg-amber-900/30 border-2 border-amber-400 dark:border-amber-600 p-4 rounded-xl text-center transition-all duration-700 hover:scale-105 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
             style={{ transitionDelay: "0.6s" }}
           >
-            <strong className="text-amber-900 text-lg block mb-1 font-semibold">+ 10 hrs/month</strong>
+            <span className="text-amber-800 text-xl block mb-1 font-semibold">+ 10 hrs/month</span>
             <span className="text-amber-800 text-sm">Ongoing Maintenance</span>
           </div>
         </div>
@@ -292,21 +310,22 @@ const TimelineInfographic = () => {
             key={item.id}
             onMouseEnter={() => setHoveredTask(item.id)}
             onMouseLeave={() => setHoveredTask(null)}
-            className={`flex items-start gap-3 p-4 bg-slate-50 rounded-xl cursor-pointer transition-all duration-300 ${
-              hoveredTask === item.id ? "scale-105 shadow-lg bg-white" : "hover:scale-102 hover:shadow-md"
+            className={`flex items-start gap-3 p-4 bg-amber-300 dark:bg-neutral-800/50 rounded-xl cursor-pointer transition-all duration-300 ${
+              hoveredTask === item.id ? "scale-105 shadow-lg bg-white dark:bg-neutral-800" : "hover:scale-102 hover:shadow-md"
             }`}
           >
             <div className={`w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 text-white ${item.bgColor}`}>
               <IconComponent type={item.icon} className="w-7 h-7" />
             </div>
             <div className="flex-1">
-              <div className="text-sm font-bold text-slate-800 mb-1">{item.label}</div>
-              <div className="text-2xl font-extrabold text-orange-500">{item.hours}</div>
+              <div className="text-sm font-bold text-slate-800 dark:text-neutral-200 mb-1">{item.label}</div>
+              <div className="text-2xl font-extrabold text-orange-500 dark:text-orange-400">{item.hours}</div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    </>
   )
 }
 
