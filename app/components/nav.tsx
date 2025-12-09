@@ -1,11 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { ThemeSwitch } from "./theme-switch";
-import { metaData } from "../config";
+import { metaData, socialLinks } from "../config";
+import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { TbMailFilled } from "react-icons/tb";
 
 const navItems = {
   // "/blog": { name: "Blog" },
   "/projects": { name: "Projects" },
   "/blog": { name: "Blog" },
+  "/videos": { name: "Videos" },
   "/contact": { name: "Contact" },
   // "/photos": { name: "Photos" },
 };
@@ -29,6 +34,42 @@ export function Navbar() {
               {name}
             </Link>
           ))}
+          <div className="flex gap-4 text-xl ml-2">
+            <a
+              href={socialLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:text-gruvbox-secondary dark:hover:text-neutral-200"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href={socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:text-gruvbox-secondary dark:hover:text-neutral-200"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href={socialLinks.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:text-gruvbox-secondary dark:hover:text-neutral-200"
+              aria-label="YouTube"
+            >
+              <FaYoutube />
+            </a>
+            <a
+              href={socialLinks.email}
+              className="transition-all hover:text-gruvbox-secondary dark:hover:text-neutral-200"
+              aria-label="Email"
+            >
+              <TbMailFilled />
+            </a>
+          </div>
           {/* <ThemeSwitch /> */}
         </div>
       </div>

@@ -11,4 +11,5 @@ export const socialLinks = {
   github: "https://github.com/charlesinwald",
   linkedin: "https://www.linkedin.com/in/charles-inwald/",
   email: "mailto:charlesinwald@gmail.com",
+  youtube: "https://www.youtube.com/@charlesinwald",
 };
