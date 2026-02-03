@@ -13,6 +13,12 @@ export const projects: Project[] = [
     image: "/rustinx.png",
   },
   {
+    title: "LogIntelligence",
+    description: "AI-Powered Log Management and Analysis",
+    url: "https://logintelligence.org",
+    image: "/logintelligence.png",
+  },
+  {
     title: "FormCraft",
     description: "A custom CMS for form builders",
     url: "https://formcraft.digital",
