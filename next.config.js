@@ -2,6 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "globaledgemarkets.com",
+        pathname: "/wp-content/uploads/**",
+      },
+    ],
+  },
   async rewrites() {
     return [
       {
