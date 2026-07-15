@@ -30,12 +30,12 @@ export const projects: Project[] = [
     url: "https://data-science-landing.vercel.app/",
     image: "/datascienceprojects.png",
   },
-  // {
-  //   title: "Aura Tracker",
-  //   description: "Sequential Test Scheduling and Compliance Management with over 700k users",
-  //   url: "https://auratracker.org",
-  //   image: "/aura.png",
-  // },
+  {
+    title: "TableSnap",
+    description: "Select any table. Copy clean Markdown or CSV",
+    url: "https://github.com/charlesinwald/tablesnap",
+    image: "/tablesnap.png",
+  },
   {
     title: "AI SEO Consultant",
     description: "Analyzes your website and provides SEO tips",
