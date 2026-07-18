@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     title: "TableSnap",
     description: "Select any table. Copy clean Markdown or CSV",
-    url: "https://github.com/charlesinwald/tablesnap",
+    url: "https://chromewebstore.google.com/detail/pobipainbnckmhoejnmgkfopjgnhepdb?utm_source=item-share-cb",
     image: "/tablesnap.png",
   },
   {
