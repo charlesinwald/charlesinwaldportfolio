@@ -13,6 +13,13 @@ export interface Video {
 export const videos: Video[] = [
   {
     source: "youtube",
+    id: "f42KupwkoDI",
+    title: "Intro to Rust",
+    description:
+      "Ever wondered how Rust achieves memory safety without a garbage collector? In this session from NYC Code & Coffee, Charles Inwald and Liam Rust break down what makes Rust one of the most talked-about systems programming languages today.",
+  },
+  {
+    source: "youtube",
     id: "SsCKnd8jj0A",
     title: "SEO for AI-Powered Search",
     description:
