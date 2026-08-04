@@ -18,12 +18,12 @@ export const projects: Project[] = [
     url: "https://logintelligence.org",
     image: "/logintelligence.png",
   },
-  {
-    title: "FormCraft",
-    description: "A custom CMS for form builders",
-    url: "https://formcraft.digital",
-    image: "/formcraft.png",
-  },
+  // {
+  //   title: "FormCraft",
+  //   description: "A custom CMS for form builders",
+  //   url: "https://formcraft.digital",
+  //   image: "/formcraft.png",
+  // },
   {
     title: "Data Science Projects",
     description: "Collection of Data Science Projects",
